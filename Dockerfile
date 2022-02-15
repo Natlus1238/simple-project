@@ -8,4 +8,5 @@ RUN tar xvzf apache-tomcat-8.5.75.tar.gz
 RUN mv apache-tomcat-8.5.75/* /opt/tomcat
 EXPOSE 8080
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+COPY target/*.war /opt/tomcat/webapp/dockeransible.war
 
