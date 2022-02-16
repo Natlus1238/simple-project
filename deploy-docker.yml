@@ -16,5 +16,4 @@
        name:  newapp
        image: "sultan1238/newapp"
        state: started
-       published ports: 
-            - 0.0.0.0:8080:8080
+       
