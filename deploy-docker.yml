@@ -7,7 +7,9 @@
       name: docker
       state: present
    - name: Install Python
-      raw: apt -y update && apt install -y python-minimal
+      apt:
+      name = python
+      state = latest
    - name: install docker-py python module
      pip:
       name: docker-py
