@@ -2,10 +2,6 @@
 - host: dev
  become: True
  tasks:
-   - name: install python pip
-     yum:
-       name: python-pip
-       state: present
    - name: install docker
      yum:
       name: docker
@@ -15,10 +11,6 @@
       name: docker
       state: started
       enable: yes
-   - name: install docker-py python module
-     pip:
-       name: docker-py
-       state: present
    - name: Start the container
      docker_container:
        name:  newapp
