@@ -1,7 +1,7 @@
 ---
 - host: dev
- become: True
- tasks:
+  become: True
+  tasks:
    - name: install docker
      yum:
       name: docker
