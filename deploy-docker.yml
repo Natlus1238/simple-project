@@ -1,0 +1,18 @@
+---
+- host: dev
+ become: True
+ tasks:
+   - name: install python pip
+     yum:
+       name: python-pip
+       state: present
+   - name: install docker-py python module
+     pip:
+       name: docker-py
+       state: present
+   - name: Start the container
+     docker_container:
+       name:  newapp
+       state: started
+       published ports: 
+            - 0.0.0.0:8080:8080
