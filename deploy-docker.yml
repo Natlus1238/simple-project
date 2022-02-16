@@ -3,15 +3,15 @@
   become: True
   tasks:
    - name: install docker
-     apt:
+     sudo apt:
       name: docker
       state: present
    - name: Install prerequisites
-      apt: 
+      sudo apt: 
        name: python-software-properties 
        state: present
   - name: Install python
-      apt: 
+      sudo apt: 
        name: python 3.8 
        state: present
    - name: install docker-py python module
